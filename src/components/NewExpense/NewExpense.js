@@ -3,7 +3,12 @@ import './NewExpense.css';
 
 const NewExpense = (props) => {
   const addNewExpenseHandler = (expense) => {
-    props.onAddExpense(expense)
+    props.onAddExpense({
+      id: Math.random(),
+      title: expense.enteredTitle,
+      amount: expense.enteredAmount,
+      date: expense.enteredDate
+    })
   }
 
   return (

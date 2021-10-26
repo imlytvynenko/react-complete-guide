@@ -37,7 +37,7 @@ const ExpenseForm = (props) => {
       enteredDate: new Date(userInput.enteredDate)
     }
 
-    props.dateChangeHandler(expenseData);
+    props.onAddExpense(expenseData);
     setUserInput(defaultUserInput);
     console.log(expenseData);
   }
